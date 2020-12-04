@@ -17,7 +17,10 @@ My Personal [Leaderboard] stats:
 <pre>
       --------Part 1--------   --------Part 2--------
 Day       Time   Rank  Score       Time   Rank  Score
-  1       >24h      0      0       >24h      0      0
+  4   10:36:15  41393      0   10:48:15  32142      0
+  3   11:45:18  45372      0   11:48:10  42662      0
+  2   10:28:19  43978      0   10:38:27  41823      0
+  1   09:40:02  35385      0   09:41:04  32156      0
 </pre>
 
 Here are some of the participants using Ruby from the [Cincinnati Ruby Brigade] or who I noticed on the [Leaderboard]:
