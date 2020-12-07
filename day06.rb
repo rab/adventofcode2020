@@ -58,15 +58,14 @@ require_relative 'input'
 day = __FILE__[/\d+/].to_i(10)
 input = Input.for_day(day, 2020)
 
-if ARGV[0] == 'test'
-  testing = true
-  ARGV.shift
+while ARGV[0]
+  case ARGV.shift
+  when 'test'
+    testing = true
+  when 'debug'
+    debugging = true
+  end
 end
-if ARGV[0] == 'debug'
-  debugging = true
-  ARGV.shift
-end
-
 
 if testing
   input = <<~GROUPS
@@ -104,10 +103,10 @@ input.each_line('', chomp: true) do |group|
     end
 
     anyone |= person
-    puts everyone.inspect, person.inspect if debugging
+    puts everyone.inspect if debugging
     everyone ||= person
     everyone &= person
-    puts everyone.inspect, person.inspect, '' if debugging
+    puts "∩ #{person.inspect}", everyone.inspect, '' if debugging
   end
   groups_counts_any << anyone.size
   groups_counts_all << everyone.size
